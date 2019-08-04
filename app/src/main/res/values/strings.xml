@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">ConstraintLayoutExamples</string>
+    <string name="parent_position_activity">ParentPositionActivity</string>
+    <string name="order_position_activity">OrderPositionActivity</string>
+    <string name="alignment_activity">AlignmentActivity</string>
+    <string name="base_alignment_activity">BaseAlignmentActivity</string>
+    <string name="guideline_activity">GuidelineActivity</string>
+    <string name="barrier_activity">BarrierActivity</string>
+    <string name="bias_constraint_activity">BiasConstraintActivity</string>
+    <string name="adjust_view_size_activity">AdjustViewSizeActivity</string>
+    <string name="matchcontraint_vs_matchparent_activity_1">MatchContraintVsMatchParentActivity1</string>
+    <string name="matchcontraint_vs_matchparent_activity_2">MatchContraintVsMatchParentActivity2</string>
+    <string name="chain_activity">ChainActivity</string>
+</resources>
