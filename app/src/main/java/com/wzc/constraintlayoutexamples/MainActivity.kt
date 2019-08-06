@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity() {
         button_matchconstraint_vs_matchparent_1.setOnClickListener{startActivity(Intent(this@MainActivity, MatchContraintVsMatchParentActivity1::class.java))}
         button_matchconstraint_vs_matchparent_2.setOnClickListener{startActivity(Intent(this@MainActivity, MatchContraintVsMatchParentActivity2::class.java))}
         button_chain.setOnClickListener{startActivity(Intent(this@MainActivity, ChainActivity::class.java))}
+        button_keyframe_animations.setOnClickListener{startActivity(Intent(this@MainActivity, KeyframeAnimationsActivity::class.java))}
     }
 
 
