@@ -11,7 +11,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".KeyframeAnimationsActivity"
+        <activity android:name=".CircularPositioningActivity">
+        </activity>
+        <activity
+            android:name=".KeyframeAnimationsActivity"
             android:label="@string/keyframe_animations_activity">
         </activity>
         <activity

@@ -12,4 +12,5 @@
     <string name="matchcontraint_vs_matchparent_activity_2">MatchContraintVsMatchParentActivity2</string>
     <string name="chain_activity">ChainActivity</string>
     <string name="keyframe_animations_activity">KeyframeAnimationsActivity</string>
+    <string name="circlular_positioning_activity">CirclularPositioningActivity(1.1)</string>
 </resources>

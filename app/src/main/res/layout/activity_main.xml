@@ -10,7 +10,14 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
+        <TextView
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/tv_relative_positioning"
+            style="@style/TextAppearance.MaterialComponents.Headline5"
+            android:text="Relative positioning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
         <Button
             android:id="@+id/button_parent_position"
             style="@style/Widget.MaterialComponents.Button"
@@ -21,7 +28,7 @@
             android:textAllCaps="false"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toBottomOf="@id/tv_relative_positioning"/>
 
         <Button
             android:id="@+id/button_order_position"
@@ -56,6 +63,20 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:text="@string/base_alignment_activity"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_alignment"/>
+
+        <Button
+            android:id="@+id/button_circlular_positioning"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/circlular_positioning_activity"
             android:textAllCaps="false"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
