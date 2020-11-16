@@ -14,7 +14,7 @@ class KeyframeAnimationsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_keyframe_animations_1)
-        constraint.setOnClickListener{
+        constraint.setOnClickListener {
             if (isTwo) {
                 animateToKeyframeOne()
             } else {
@@ -31,7 +31,10 @@ class KeyframeAnimationsActivity : AppCompatActivity() {
         transition.interpolator = AnticipateOvershootInterpolator(1.0f)
         transition.duration = 1200
 
-        TransitionManager.beginDelayedTransition(constraint, transition) // constraint 这个 id 是设置在 keyframe_1 上面的
+        TransitionManager.beginDelayedTransition(
+            constraint,
+            transition
+        ) // constraint 这个 id 是设置在 keyframe_1 上面的
         constraintSet.applyTo(constraint)
     }
 
