@@ -6,15 +6,16 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintSet
 import androidx.transition.ChangeBounds
 import androidx.transition.TransitionManager
-import kotlinx.android.synthetic.main.activity_keyframe_animations_1.*
+import com.wzc.constraintlayoutexamples.databinding.ActivityKeyframeAnimations1Binding
 
 class KeyframeAnimationsActivity : AppCompatActivity() {
     private var isTwo = false
-
+    private lateinit var binding: ActivityKeyframeAnimations1Binding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_keyframe_animations_1)
-        constraint.setOnClickListener {
+        binding = ActivityKeyframeAnimations1Binding.inflate(layoutInflater)
+        setContentView(binding.root)
+        binding.constraint.setOnClickListener {
             if (isTwo) {
                 animateToKeyframeOne()
             } else {
@@ -32,10 +33,10 @@ class KeyframeAnimationsActivity : AppCompatActivity() {
         transition.duration = 1200
 
         TransitionManager.beginDelayedTransition(
-            constraint,
+            binding.constraint,
             transition
         ) // constraint 这个 id 是设置在 keyframe_1 上面的
-        constraintSet.applyTo(constraint)
+        constraintSet.applyTo(binding.constraint)
     }
 
     private fun animateToKeyframeOne() {
@@ -45,7 +46,7 @@ class KeyframeAnimationsActivity : AppCompatActivity() {
         transition.interpolator = AnticipateOvershootInterpolator(1.0f)
         transition.duration = 1200
 
-        TransitionManager.beginDelayedTransition(constraint, transition)
-        constraintSet.applyTo(constraint)
+        TransitionManager.beginDelayedTransition(binding.constraint, transition)
+        constraintSet.applyTo(binding.constraint)
     }
 }
