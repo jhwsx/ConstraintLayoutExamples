@@ -2,7 +2,17 @@ package com.wzc.constraintlayoutexamples
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat.startActivity
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.ListAdapter
+import androidx.recyclerview.widget.RecyclerView.*
 import com.wzc.constraintlayoutexamples.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -12,20 +22,76 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding.buttonParentPosition.setOnClickListener{startActivity(Intent(this@MainActivity, ParentPositionActivity::class.java))}
-        binding.buttonOrderPosition.setOnClickListener{startActivity(Intent(this@MainActivity, OrderPositionActivity::class.java))}
-        binding.buttonAlignment.setOnClickListener{startActivity(Intent(this@MainActivity, AlignmentActivity::class.java))}
-        binding.buttonBaseAlignment.setOnClickListener{startActivity(Intent(this@MainActivity, BaseAlignmentActivity::class.java))}
-        binding.buttonGuideline.setOnClickListener{startActivity(Intent(this@MainActivity, GuidelineActivity::class.java))}
-        binding.buttonBarrier.setOnClickListener{startActivity(Intent(this@MainActivity, BarrierActivity::class.java))}
-        binding.buttonBiasConstraint.setOnClickListener{startActivity(Intent(this@MainActivity, BiasConstraintActivity::class.java))}
-        binding.buttonAdjustViewSize.setOnClickListener{startActivity(Intent(this@MainActivity, AdjustViewSizeActivity::class.java))}
-        binding.buttonMatchconstraintVsMatchparent1.setOnClickListener{startActivity(Intent(this@MainActivity, MatchContraintVsMatchParentActivity1::class.java))}
-        binding.buttonMatchconstraintVsMatchparent2.setOnClickListener{startActivity(Intent(this@MainActivity, MatchContraintVsMatchParentActivity2::class.java))}
-        binding.buttonChain.setOnClickListener{startActivity(Intent(this@MainActivity, ChainActivity::class.java))}
-        binding.buttonKeyframeAnimations.setOnClickListener{startActivity(Intent(this@MainActivity, KeyframeAnimationsActivity::class.java))}
-        binding.buttonCirclularPositioning.setOnClickListener{startActivity(Intent(this@MainActivity, CircularPositioningActivity::class.java))}
+        binding.recyclerview.addItemDecoration(DividerItemDecoration(this, VERTICAL))
+        binding.recyclerview.layoutManager = LinearLayoutManager(this)
+        val myAdapter = MyAdapter {
+            startActivity(Intent(this@MainActivity, it.clazz))
+        }
+        binding.recyclerview.adapter = myAdapter
+        myAdapter.submitList(listOf(
+            Item(R.string.parent_position_activity, ParentPositionActivity::class.java),
+            Item(R.string.order_position_activity, OrderPositionActivity::class.java),
+            Item(R.string.alignment_activity, AlignmentActivity::class.java),
+            Item(R.string.message_item_activity, MessageItemActivity::class.java),
+            Item(R.string.weight_activity, WeightActivity::class.java),
+            Item(R.string.base_alignment_activity, BaseAlignmentActivity::class.java),
+            Item(R.string.guideline_activity, GuidelineActivity::class.java),
+            Item(R.string.barrier_activity, BarrierActivity::class.java),
+            Item(R.string.bias_constraint_activity, BiasConstraintActivity::class.java),
+            Item(R.string.adjust_view_size_activity, AdjustViewSizeActivity::class.java),
+            Item(R.string.matchconstraint_vs_matchparent_activity_1, MatchConstraintVsMatchParentActivity1::class.java),
+            Item(R.string.matchconstraint_vs_matchparent_activity_2, MatchConstraintVsMatchParentActivity2::class.java),
+            Item(R.string.chain_activity, ChainActivity::class.java),
+            Item(R.string.keyframe_animations_activity, KeyframeAnimationsActivity::class.java),
+            Item(R.string.circlular_positioning_activity, CircularPositioningActivity::class.java),
+            Item(R.string.constrained_width_height_activity, ConstrainedWidthHeightActivity::class.java),
+            Item(R.string.gone_margin_activity, GoneMarginActivity::class.java),
+        ))
     }
 
+    class MyAdapter(private val itemCallback: (Item) -> Unit): ListAdapter<Item, MyAdapter.MyHolder>(diffCallback) {
 
+        override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyHolder {
+            return MyHolder.newInstance(parent, itemCallback)
+        }
+
+        override fun onBindViewHolder(holder: MyHolder, position: Int) {
+            holder.bindItem(getItem(position))
+        }
+
+        class MyHolder(itemView: View, private val itemCallback: (Item) -> Unit) : ViewHolder(itemView) {
+
+            private val tv: TextView
+            init {
+                tv = itemView.findViewById(android.R.id.text1)
+            }
+            fun bindItem(item: Item) {
+                tv.setText(item.strRes)
+                tv.setOnClickListener {
+                    itemCallback.invoke(item)
+                }
+            }
+            companion object {
+                fun newInstance(parent: ViewGroup, itemCallback: (Item) -> Unit): MyHolder {
+                    val view = LayoutInflater.from(parent.context)
+                        .inflate(android.R.layout.simple_list_item_1, parent, false)
+                    return MyHolder(view, itemCallback)
+                }
+            }
+        }
+
+        companion object {
+            private val diffCallback = object : DiffUtil.ItemCallback<Item>() {
+                override fun areItemsTheSame(oldItem: Item, newItem: Item): Boolean {
+                    return oldItem == newItem
+                }
+
+                override fun areContentsTheSame(oldItem: Item, newItem: Item): Boolean {
+                    return oldItem == newItem
+                }
+            }
+        }
+    }
 }
+
+data class Item(val strRes: Int, val clazz: Class<*>)

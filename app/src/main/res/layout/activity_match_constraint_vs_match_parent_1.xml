@@ -5,8 +5,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MatchContraintVsMatchParentActivity1">
+    tools:context=".MatchConstraintVsMatchParentActivity1">
 
+    <!--android:layout_height="0dp" 的 0dp 就是 match constraint，充满约束-->
     <Button
         android:id="@+id/button8"
         android:layout_width="0dp"

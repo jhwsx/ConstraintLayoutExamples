@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          xmlns:tools="http://schemas.android.com/tools"
-          package="com.wzc.constraintlayoutexamples">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.wzc.constraintlayoutexamples">
 
     <application
         android:allowBackup="true"
@@ -11,62 +11,67 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".CircularPositioningActivity">
-        </activity>
+        <activity
+            android:name=".GoneMarginActivity"
+            android:label="@string/gone_margin_activity"
+            android:exported="false" />
+        <activity
+            android:name=".ConstrainedWidthHeightActivity"
+            android:exported="false"
+            android:label="@string/constrained_width_height_activity" />
+        <activity
+            android:name=".WeightActivity"
+            android:exported="false"
+            android:label="@string/weight_activity" />
+        <activity
+            android:name=".CircularPositioningActivity"
+            android:label="@string/circlular_positioning_activity" />
         <activity
             android:name=".KeyframeAnimationsActivity"
-            android:label="@string/keyframe_animations_activity">
-        </activity>
+            android:label="@string/keyframe_animations_activity" />
         <activity
             android:name=".ChainActivity"
-            android:label="@string/chain_activity">
-        </activity>
+            android:label="@string/chain_activity" />
         <activity
-            android:name=".MatchContraintVsMatchParentActivity1"
-            android:label="@string/matchcontraint_vs_matchparent_activity_1">
-        </activity>
+            android:name=".MatchConstraintVsMatchParentActivity1"
+            android:label="@string/matchconstraint_vs_matchparent_activity_1" />
         <activity
-            android:name=".MatchContraintVsMatchParentActivity2"
-            android:label="@string/matchcontraint_vs_matchparent_activity_2">
-        </activity>
+            android:name=".MatchConstraintVsMatchParentActivity2"
+            android:label="@string/matchconstraint_vs_matchparent_activity_2" />
         <activity
             android:name=".AdjustViewSizeActivity"
-            android:label="@string/adjust_view_size_activity">
-        </activity>
+            android:label="@string/adjust_view_size_activity" />
         <activity
             android:name=".BiasConstraintActivity"
-            android:label="@string/bias_constraint_activity">
-        </activity>
+            android:label="@string/bias_constraint_activity" />
         <activity
             android:name=".BarrierActivity"
-            android:label="@string/barrier_activity">
-        </activity>
+            android:label="@string/barrier_activity" />
         <activity
             android:name=".GuidelineActivity"
-            android:label="@string/guideline_activity">
-        </activity>
+            android:label="@string/guideline_activity" />
         <activity
             android:name=".BaseAlignmentActivity"
-            android:label="@string/base_alignment_activity">
-        </activity>
+            android:label="@string/base_alignment_activity" />
+        <activity
+            android:name=".MessageItemActivity"
+            android:label="@string/message_item_activity" />
         <activity
             android:name=".AlignmentActivity"
-            android:label="@string/alignment_activity">
-        </activity>
+            android:label="@string/alignment_activity" />
         <activity
             android:name=".OrderPositionActivity"
-            android:label="@string/order_position_activity">
-        </activity>
+            android:label="@string/order_position_activity" />
         <activity
             android:name=".ParentPositionActivity"
-            android:label="@string/parent_position_activity">
-        </activity>
-        <activity android:name=".MainActivity"
+            android:label="@string/parent_position_activity" />
+        <activity
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
     </application>

@@ -1,12 +1,11 @@
 package com.wzc.constraintlayoutexamples
 
-import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
 
-class MatchContraintVsMatchParentActivity1 : AppCompatActivity() {
-
+class ConstrainedWidthHeightActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_match_contraint_vs_match_parent_1)
+        setContentView(R.layout.activity_constrained_width_height)
     }
 }

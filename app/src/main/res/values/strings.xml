@@ -3,14 +3,18 @@
     <string name="parent_position_activity">ParentPositionActivity</string>
     <string name="order_position_activity">OrderPositionActivity</string>
     <string name="alignment_activity">AlignmentActivity</string>
+    <string name="message_item_activity">MessageItemActivity</string>
     <string name="base_alignment_activity">BaseAlignmentActivity</string>
+    <string name="weight_activity">WeightActivity</string>
     <string name="guideline_activity">GuidelineActivity</string>
     <string name="barrier_activity">BarrierActivity</string>
     <string name="bias_constraint_activity">BiasConstraintActivity</string>
     <string name="adjust_view_size_activity">AdjustViewSizeActivity</string>
-    <string name="matchcontraint_vs_matchparent_activity_1">MatchContraintVsMatchParentActivity1</string>
-    <string name="matchcontraint_vs_matchparent_activity_2">MatchContraintVsMatchParentActivity2</string>
+    <string name="matchconstraint_vs_matchparent_activity_1">MatchConstraintVsMatchParentActivity1</string>
+    <string name="matchconstraint_vs_matchparent_activity_2">MatchConstraintVsMatchParentActivity2</string>
     <string name="chain_activity">ChainActivity</string>
     <string name="keyframe_animations_activity">KeyframeAnimationsActivity</string>
     <string name="circlular_positioning_activity">CirclularPositioningActivity(1.1)</string>
+    <string name="constrained_width_height_activity">ConstrainedWidthHeightActivity</string>
+    <string name="gone_margin_activity">GoneMarginActivity</string>
 </resources>
