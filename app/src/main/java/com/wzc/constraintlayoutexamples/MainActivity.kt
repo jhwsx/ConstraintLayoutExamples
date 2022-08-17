@@ -35,21 +35,28 @@ class MainActivity : AppCompatActivity() {
             Item(R.string.message_item_activity, MessageItemActivity::class.java),
             Item(R.string.weight_activity, WeightActivity::class.java),
             Item(R.string.base_alignment_activity, BaseAlignmentActivity::class.java),
-            Item(R.string.guideline_activity, GuidelineActivity::class.java),
-            Item(R.string.barrier_activity, BarrierActivity::class.java),
             Item(R.string.bias_constraint_activity, BiasConstraintActivity::class.java),
             Item(R.string.adjust_view_size_activity, AdjustViewSizeActivity::class.java),
-            Item(R.string.matchconstraint_vs_matchparent_activity_1, MatchConstraintVsMatchParentActivity1::class.java),
-            Item(R.string.matchconstraint_vs_matchparent_activity_2, MatchConstraintVsMatchParentActivity2::class.java),
+            Item(R.string.matchconstraint_vs_matchparent_activity_1,
+                MatchConstraintVsMatchParentActivity1::class.java),
+            Item(R.string.matchconstraint_vs_matchparent_activity_2,
+                MatchConstraintVsMatchParentActivity2::class.java),
             Item(R.string.chain_activity, ChainActivity::class.java),
             Item(R.string.keyframe_animations_activity, KeyframeAnimationsActivity::class.java),
             Item(R.string.circlular_positioning_activity, CircularPositioningActivity::class.java),
-            Item(R.string.constrained_width_height_activity, ConstrainedWidthHeightActivity::class.java),
+            Item(R.string.constrained_width_height_activity,
+                ConstrainedWidthHeightActivity::class.java),
             Item(R.string.gone_margin_activity, GoneMarginActivity::class.java),
+            Item(R.string.percent_activity, PercentActivity::class.java),
+            Item(R.string.guideline_activity, GuidelineActivity::class.java),
+            Item(R.string.group_activity, GroupActivity::class.java),
+            Item(R.string.layer_activity, LayerActivity::class.java),
+            Item(R.string.barrier_activity, BarrierActivity::class.java),
         ))
     }
 
-    class MyAdapter(private val itemCallback: (Item) -> Unit): ListAdapter<Item, MyAdapter.MyHolder>(diffCallback) {
+    class MyAdapter(private val itemCallback: (Item) -> Unit) :
+        ListAdapter<Item, MyAdapter.MyHolder>(diffCallback) {
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyHolder {
             return MyHolder.newInstance(parent, itemCallback)
@@ -59,18 +66,22 @@ class MainActivity : AppCompatActivity() {
             holder.bindItem(getItem(position))
         }
 
-        class MyHolder(itemView: View, private val itemCallback: (Item) -> Unit) : ViewHolder(itemView) {
+        class MyHolder(itemView: View, private val itemCallback: (Item) -> Unit) :
+            ViewHolder(itemView) {
 
             private val tv: TextView
+
             init {
                 tv = itemView.findViewById(android.R.id.text1)
             }
+
             fun bindItem(item: Item) {
                 tv.setText(item.strRes)
                 tv.setOnClickListener {
                     itemCallback.invoke(item)
                 }
             }
+
             companion object {
                 fun newInstance(parent: ViewGroup, itemCallback: (Item) -> Unit): MyHolder {
                     val view = LayoutInflater.from(parent.context)

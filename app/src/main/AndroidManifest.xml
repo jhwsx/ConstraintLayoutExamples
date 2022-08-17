@@ -12,9 +12,20 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity
-            android:name=".GoneMarginActivity"
-            android:label="@string/gone_margin_activity"
+            android:name=".LayerActivity"
             android:exported="false" />
+        <activity
+            android:name=".GroupActivity"
+            android:exported="false"
+            android:label="@string/group_activity" />
+        <activity
+            android:name=".PercentActivity"
+            android:exported="false"
+            android:label="@string/percent_activity" />
+        <activity
+            android:name=".GoneMarginActivity"
+            android:exported="false"
+            android:label="@string/gone_margin_activity" />
         <activity
             android:name=".ConstrainedWidthHeightActivity"
             android:exported="false"

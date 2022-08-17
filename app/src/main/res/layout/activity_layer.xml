@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GroupActivity">
+
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Layer 1 实现 move 和 rotate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.48" />
+
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Layer 2 实现 move 和 rotate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.48" />
+
+    <androidx.constraintlayout.helper.widget.Layer
+        android:id="@+id/layer1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="view1,view2,view3"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#D500F9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn1" />
+
+    <TextView
+        android:id="@+id/view2"
+        style="@style/TextAppearance.AppCompat.Body2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="willwaywang6"
+        app:layout_constraintBottom_toTopOf="@id/view3"
+        app:layout_constraintStart_toEndOf="@id/view1"
+        app:layout_constraintTop_toTopOf="@id/view1" />
+
+    <TextView
+        android:id="@+id/view3"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="How's it going?"
+        app:layout_constraintBottom_toBottomOf="@id/view1"
+        app:layout_constraintStart_toEndOf="@id/view1"
+        app:layout_constraintTop_toBottomOf="@id/view2" />
+
+    <androidx.constraintlayout.helper.widget.Layer
+        android:id="@+id/layer2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_tags="avatar,name,desc"
+        tools:ignore="MissingConstraints" />
+    <!--使用 android:tag 是不可以的，没有效果，需要使用 app:layout_constraintTag，还必须有一个 id 属性值。-->
+    <View
+        android:id="@+id/view4"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#1565C0"
+        app:layout_constraintStart_toStartOf="@id/btn2"
+        app:layout_constraintTag="avatar"
+        app:layout_constraintTop_toBottomOf="@id/btn2" />
+
+    <TextView
+        android:id="@+id/view5"
+        style="@style/TextAppearance.AppCompat.Body2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="willwaywang6"
+        app:layout_constraintBottom_toTopOf="@id/view6"
+        app:layout_constraintStart_toEndOf="@id/view4"
+        app:layout_constraintTag="name"
+        app:layout_constraintTop_toTopOf="@id/view4" />
+
+    <TextView
+        android:id="@+id/view6"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="How's it going?"
+        app:layout_constraintBottom_toBottomOf="@id/view4"
+        app:layout_constraintStart_toEndOf="@id/view4"
+        app:layout_constraintTag="desc"
+        app:layout_constraintTop_toBottomOf="@id/view5" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -17,4 +17,7 @@
     <string name="circlular_positioning_activity">CirclularPositioningActivity(1.1)</string>
     <string name="constrained_width_height_activity">ConstrainedWidthHeightActivity</string>
     <string name="gone_margin_activity">GoneMarginActivity</string>
+    <string name="percent_activity">PercentActivity</string>
+    <string name="group_activity">GroupActivity</string>
+    <string name="layer_activity">LayerActivity</string>
 </resources>

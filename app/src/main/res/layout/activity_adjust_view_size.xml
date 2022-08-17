@@ -57,30 +57,33 @@
             app:layout_constraintTop_toBottomOf="@+id/imageView3"
             app:srcCompat="@mipmap/ic_launcher"/>
 
+        <!--宽是确定的，求高（0dp），宽比高是16:9-->
         <ImageView
             android:id="@+id/imageView5"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
             android:layout_marginTop="8dp"
             android:scaleType="centerCrop"
-            app:layout_constraintDimensionRatio="w,16:9"
+            app:layout_constraintDimensionRatio="16:9"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView4"
             app:srcCompat="@mipmap/ic_launcher"/>
 
+        <!--高是确定的，求宽（0dp），宽比高是16:9-->
         <ImageView
             android:id="@+id/imageView6"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:scaleType="centerCrop"
-            app:layout_constraintDimensionRatio="h,16:9"
+            app:layout_constraintDimensionRatio="16:9"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView5"
             app:srcCompat="@mipmap/ic_launcher"/>
 
+        <!--width：0dp，height：0dp，则 h,16:9：h 表示高度是计算出来的，宽度是充满约束得出来的，16:9 表示宽高比-->
         <ImageView
             android:id="@+id/imageView7"
             android:layout_width="0dp"
@@ -91,18 +94,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView6"
-            app:srcCompat="@mipmap/ic_launcher"/>
-
-        <ImageView
-            android:id="@+id/imageView8"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginTop="8dp"
-            android:scaleType="centerCrop"
-            app:layout_constraintDimensionRatio="w,16:9"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView7"
             app:srcCompat="@mipmap/ic_launcher"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>
