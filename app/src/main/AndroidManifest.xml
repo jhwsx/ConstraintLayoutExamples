@@ -12,6 +12,30 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity
+            android:name=".FlowActivity"
+            android:label="@string/flow_activity"
+            android:exported="false" />
+        <activity
+            android:name=".LinearConstraintActivity"
+            android:exported="false"
+            android:label="@string/linear_constraint_activity" />
+        <activity
+            android:name=".ConstraintSet2Activity"
+            android:exported="false"
+            android:label="@string/constraint_set_2_activity" />
+        <activity
+            android:name=".ConstraintSet1Activity"
+            android:exported="false"
+            android:label="@string/constraint_set_1_activity" />
+        <activity
+            android:name=".PlaceholderActivity"
+            android:exported="false"
+            android:label="@string/placeholder_activity" />
+        <activity
+            android:name=".CircularRevealActivity"
+            android:exported="false"
+            android:label="@string/circular_reveal_activity" />
+        <activity
             android:name=".LayerActivity"
             android:exported="false" />
         <activity

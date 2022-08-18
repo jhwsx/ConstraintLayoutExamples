@@ -20,4 +20,10 @@
     <string name="percent_activity">PercentActivity</string>
     <string name="group_activity">GroupActivity</string>
     <string name="layer_activity">LayerActivity</string>
+    <string name="circular_reveal_activity">CircularRevealActivity</string>
+    <string name="placeholder_activity">PlaceholderActivity</string>
+    <string name="constraint_set_1_activity">ConstraintSet1Activity</string>
+    <string name="constraint_set_2_activity">ConstraintSet2Activity</string>
+    <string name="linear_constraint_activity">LinearConstraintActivity</string>
+    <string name="flow_activity">FlowActivity</string>
 </resources>

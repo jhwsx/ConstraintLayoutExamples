@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -42,7 +41,6 @@ class MainActivity : AppCompatActivity() {
             Item(R.string.matchconstraint_vs_matchparent_activity_2,
                 MatchConstraintVsMatchParentActivity2::class.java),
             Item(R.string.chain_activity, ChainActivity::class.java),
-            Item(R.string.keyframe_animations_activity, KeyframeAnimationsActivity::class.java),
             Item(R.string.circlular_positioning_activity, CircularPositioningActivity::class.java),
             Item(R.string.constrained_width_height_activity,
                 ConstrainedWidthHeightActivity::class.java),
@@ -52,6 +50,13 @@ class MainActivity : AppCompatActivity() {
             Item(R.string.group_activity, GroupActivity::class.java),
             Item(R.string.layer_activity, LayerActivity::class.java),
             Item(R.string.barrier_activity, BarrierActivity::class.java),
+            Item(R.string.circular_reveal_activity, CircularRevealActivity::class.java),
+            Item(R.string.placeholder_activity, PlaceholderActivity::class.java),
+            Item(R.string.constraint_set_1_activity, ConstraintSet1Activity::class.java),
+            Item(R.string.constraint_set_2_activity, ConstraintSet2Activity::class.java),
+            Item(R.string.keyframe_animations_activity, KeyframeAnimationsActivity::class.java),
+            Item(R.string.linear_constraint_activity, LinearConstraintActivity::class.java),
+            Item(R.string.flow_activity, FlowActivity::class.java),
         ))
     }
 

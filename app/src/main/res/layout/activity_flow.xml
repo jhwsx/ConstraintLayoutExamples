@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FlowActivity">
+
+    <androidx.constraintlayout.helper.widget.Flow
+        app:constraint_referenced_ids="view1,view2,view3,view4,view5,view6,view7,view8,view9,view10"
+        app:flow_wrapMode="aligned"
+        app:flow_horizontalGap="16dp"
+        app:flow_verticalGap="16dp"
+        android:layout_width="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:id="@+id/view1"
+        android:background="#C62828"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/view2"
+        android:background="#AD1457"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/view3"
+        android:background="#6A1B9A"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/view4"
+        android:background="#283593"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/view5"
+        android:background="#1565C0"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/view6"
+        android:background="#00838F"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/view7"
+        android:background="#00695C"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/view8"
+        android:background="#2E7D32"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/view9"
+        android:background="#9E9D24"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/view10"
+        android:background="#F9A825"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        tools:ignore="MissingConstraints" />
+</androidx.constraintlayout.widget.ConstraintLayout>
