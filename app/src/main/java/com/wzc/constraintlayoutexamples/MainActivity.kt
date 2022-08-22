@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
             Item(R.string.alignment_activity, AlignmentActivity::class.java),
             Item(R.string.message_item_activity, MessageItemActivity::class.java),
             Item(R.string.weight_activity, WeightActivity::class.java),
-            Item(R.string.base_alignment_activity, BaseAlignmentActivity::class.java),
+            Item(R.string.baseline_alignment_activity, BaselineAlignmentActivity::class.java),
             Item(R.string.bias_constraint_activity, BiasConstraintActivity::class.java),
             Item(R.string.adjust_view_size_activity, AdjustViewSizeActivity::class.java),
             Item(R.string.matchconstraint_vs_matchparent_activity_1,

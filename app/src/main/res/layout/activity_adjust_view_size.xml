@@ -44,6 +44,7 @@
             app:layout_constraintTop_toBottomOf="@+id/imageView2"
             app:srcCompat="@mipmap/ic_launcher"/>
 
+        <!--layout_constraintWidth_default， layout_constraintWidth_min 仅在宽度设置充满约束时才会生效-->
         <ImageView
             android:id="@+id/imageView4"
             android:layout_width="0dp"
@@ -57,7 +58,9 @@
             app:layout_constraintTop_toBottomOf="@+id/imageView3"
             app:srcCompat="@mipmap/ic_launcher"/>
 
+        <!--如果没有一个尺寸是0dp，那么layout_constraintDimensionRatio的设置是无效的。-->
         <!--宽是确定的，求高（0dp），宽比高是16:9-->
+        <!--一个是确定的（如固定的大小100dp，或者wrap_content），一个是 0dp，如果写16:9,就是宽高比，h,16:9，还是宽高比，w,16:9，就是高宽比。-->
         <ImageView
             android:id="@+id/imageView5"
             android:layout_width="wrap_content"
@@ -83,7 +86,8 @@
             app:layout_constraintTop_toBottomOf="@+id/imageView5"
             app:srcCompat="@mipmap/ic_launcher"/>
 
-        <!--width：0dp，height：0dp，则 h,16:9：h 表示高度是计算出来的，宽度是充满约束得出来的，16:9 表示宽高比-->
+        <!--width：0dp，height：0dp，则 h,16:9：h 表示高度是计算出来的(在布局视图中可以看到有一根连接着顶边和底边的实线)，
+        宽度是充满约束得出来的，16:9 表示宽高比-->
         <ImageView
             android:id="@+id/imageView7"
             android:layout_width="0dp"

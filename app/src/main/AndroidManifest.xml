@@ -86,8 +86,8 @@
             android:name=".GuidelineActivity"
             android:label="@string/guideline_activity" />
         <activity
-            android:name=".BaseAlignmentActivity"
-            android:label="@string/base_alignment_activity" />
+            android:name=".BaselineAlignmentActivity"
+            android:label="@string/baseline_alignment_activity" />
         <activity
             android:name=".MessageItemActivity"
             android:label="@string/message_item_activity" />

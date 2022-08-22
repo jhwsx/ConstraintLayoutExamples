@@ -4,7 +4,7 @@
     <string name="order_position_activity">OrderPositionActivity</string>
     <string name="alignment_activity">AlignmentActivity</string>
     <string name="message_item_activity">MessageItemActivity</string>
-    <string name="base_alignment_activity">BaseAlignmentActivity</string>
+    <string name="baseline_alignment_activity">BaselineAlignmentActivity</string>
     <string name="weight_activity">WeightActivity</string>
     <string name="guideline_activity">GuidelineActivity</string>
     <string name="barrier_activity">BarrierActivity</string>
