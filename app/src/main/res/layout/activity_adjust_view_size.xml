@@ -99,5 +99,43 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView6"
             app:srcCompat="@mipmap/ic_launcher"/>
+
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:background="#bebebe"
+            android:text="TextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageView7" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:background="#bebebe"
+            android:text="TextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageView7" />
+
+        <!--当TextView文字较少时，可以发现其尺寸是默认占据了整个约束空间，这时候，如果要求TextView只显示文字大小，类似设置wrap_content的效果，但是在文字长的时候，又必须被边缘约束，所以又不能设置wrap_content，这种场景下，可以通过layout_constraintWidth_default属性来解决，它提供了边缘约束下默认的尺寸设置方式。-->
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintWidth_default="wrap"
+            app:layout_constraintBottom_toBottomOf="@id/textView5"
+            app:layout_constraintTop_toTopOf="@id/textView5"
+            android:text="TextViewTextViewTextViewTextViewTextViewTextView"
+            app:layout_constraintEnd_toStartOf="@+id/textView5"
+            app:layout_constraintStart_toEndOf="@+id/textView4" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>

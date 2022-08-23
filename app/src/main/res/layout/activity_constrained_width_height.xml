@@ -6,6 +6,43 @@
     android:layout_height="match_parent"
     tools:context=".ConstrainedWidthHeightActivity">
 
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toStartOf="@+id/textView5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--当第二个TextView文字超长的时候，希望它截断，而不会影响左右的TextView。-->
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="TextViewTextViewTextViewTextView"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toStartOf="@+id/textView6"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toTopOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView5"
+        app:layout_constraintTop_toTopOf="@+id/textView5" />
+
     <ImageView
         android:id="@+id/imageView"
         app:srcCompat="@mipmap/ic_launcher"
@@ -16,6 +53,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp" />
 
+    <!--通过使用constrainedWidth来使其宽度约束强制生效-->
     <TextView
         android:id="@+id/tv"
         app:layout_constraintTop_toBottomOf="@id/imageView"
