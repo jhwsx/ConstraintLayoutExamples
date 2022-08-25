@@ -12,9 +12,21 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity
-            android:name=".FlowActivity"
-            android:label="@string/flow_activity"
+            android:name=".TransitionManagerGoActivity"
+            android:label="@string/activity_transition_manager_go"
             android:exported="false" />
+        <activity
+            android:name=".ObjectAnimatorVsTransitionActivity"
+            android:exported="false"
+            android:label="@string/activity_object_animator_vs_transition" />
+        <activity
+            android:name=".ObjectAnimatorActivity"
+            android:exported="false"
+            android:label="@string/object_animator_activity" />
+        <activity
+            android:name=".FlowActivity"
+            android:exported="false"
+            android:label="@string/flow_activity" />
         <activity
             android:name=".LinearConstraintActivity"
             android:exported="false"

@@ -57,6 +57,9 @@ class MainActivity : AppCompatActivity() {
             Item(R.string.keyframe_animations_activity, KeyframeAnimationsActivity::class.java),
             Item(R.string.linear_constraint_activity, LinearConstraintActivity::class.java),
             Item(R.string.flow_activity, FlowActivity::class.java),
+            Item(R.string.object_animator_activity, ObjectAnimatorActivity::class.java),
+            Item(R.string.activity_object_animator_vs_transition, ObjectAnimatorVsTransitionActivity::class.java),
+            Item(R.string.activity_transition_manager_go, TransitionManagerGoActivity::class.java),
         ))
     }
 
