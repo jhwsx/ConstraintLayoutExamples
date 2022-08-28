@@ -11,10 +11,39 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+
+        <activity
+            android:name=".MotionLayoutFeature3Activity"
+            android:label="@string/activity_motion_layout_feature_3"
+            android:exported="false" />
+        <activity
+            android:name=".MotionLayoutFeature2Activity"
+            android:label="@string/activity_motion_layout_feature_2"
+            android:exported="false" />
+        <activity
+            android:name=".MotionLayoutFeature1Activity"
+            android:label="@string/activity_motion_layout_feature_1"
+            android:exported="false" />
+        <activity
+            android:name=".MotionLayout3Activity"
+            android:exported="false"
+            android:label="@string/activity_motion_layout_3" />
+        <activity
+            android:name=".MotionLayout2Activity"
+            android:exported="false"
+            android:label="@string/activity_motion_layout_2" />
+        <activity
+            android:name=".MotionLayoutActivity"
+            android:exported="false"
+            android:label="@string/activity_motion_layout" />
+        <activity
+            android:name=".TransitionManagerConstraintSetActivity"
+            android:exported="false"
+            android:label="@string/activity_transition_manager_constraint_set" />
         <activity
             android:name=".TransitionManagerGoActivity"
-            android:label="@string/activity_transition_manager_go"
-            android:exported="false" />
+            android:exported="false"
+            android:label="@string/activity_transition_manager_go" />
         <activity
             android:name=".ObjectAnimatorVsTransitionActivity"
             android:exported="false"

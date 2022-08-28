@@ -27,6 +27,7 @@ class TransitionManagerGoActivity : AppCompatActivity(), View.OnClickListener {
 
     private var toggle = true
     override fun onClick(v: View) {
+        // 通过 xml 来决定开始场景，结束场景。
         val root = findViewById<ViewGroup>(R.id.root)
         val startScene = Scene.getSceneForLayout(root, R.layout.go_start, this)
         val endScene = Scene.getSceneForLayout(root, R.layout.go_end, this)
@@ -35,6 +36,7 @@ class TransitionManagerGoActivity : AppCompatActivity(), View.OnClickListener {
         } else {
             TransitionManager.go(startScene)
         }
+        // 切换后，旧布局被移除，添加了新布局，必须要再次设置数据
         setupData()
         toggle = !toggle
     }

@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merge xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:showIn="@layout/activity_transition_manager_go"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-
-
+    tools:context=".TransitionManagerConstraintSetActivity">
     <View
         android:id="@+id/background"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="200dp"
         android:background="@color/colorPrimary"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/image_film_cover"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:adjustViewBounds="true"
         android:contentDescription="@null"
-        android:src="@drawable/film_cover"
         android:scaleType="fitXY"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        android:src="@drawable/film_cover"
+        app:layout_constraintTop_toTopOf="@+id/background"
+        app:layout_constraintBottom_toBottomOf="@+id/background"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/text_film_title"
@@ -39,15 +39,14 @@
         app:layout_constraintStart_toEndOf="@id/image_film_cover"
         app:layout_constraintTop_toTopOf="@id/image_film_cover" />
 
-
     <RatingBar
-        android:numStars="5"
         android:id="@+id/rating_film_rating"
         style="?android:attr/ratingBarStyleSmall"
+        android:numStars="5"
+        android:progressTint="#FF8F00"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingVertical="8dp"
-        android:progressTint="#FF8F00"
         app:layout_constraintTop_toBottomOf="@id/text_film_title"
         app:layout_constraintStart_toStartOf="@+id/text_film_title" />
 
@@ -57,7 +56,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="16dp"
-        android:text="电影简介"
+        android:text="@string/file_description_title"
         android:textColor="@color/colorPrimary"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -80,8 +79,9 @@
         android:layout_margin="16dp"
         android:src="@drawable/ic_bookmark_24dp"
         android:tint="#C62828"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/background"
+        app:layout_constraintTop_toBottomOf="@id/background"
         app:fabSize="mini" />
 
-</merge>
+</androidx.constraintlayout.widget.ConstraintLayout>

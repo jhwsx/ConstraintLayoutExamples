@@ -60,6 +60,13 @@ class MainActivity : AppCompatActivity() {
             Item(R.string.object_animator_activity, ObjectAnimatorActivity::class.java),
             Item(R.string.activity_object_animator_vs_transition, ObjectAnimatorVsTransitionActivity::class.java),
             Item(R.string.activity_transition_manager_go, TransitionManagerGoActivity::class.java),
+            Item(R.string.activity_transition_manager_constraint_set, TransitionManagerConstraintSetActivity::class.java),
+            Item(R.string.activity_motion_layout, MotionLayoutActivity::class.java),
+            Item(R.string.activity_motion_layout_2, MotionLayout2Activity::class.java),
+            Item(R.string.activity_motion_layout_3, MotionLayout3Activity::class.java),
+            Item(R.string.activity_motion_layout_feature_1, MotionLayoutFeature1Activity::class.java),
+            Item(R.string.activity_motion_layout_feature_2, MotionLayoutFeature2Activity::class.java),
+            Item(R.string.activity_motion_layout_feature_3, MotionLayoutFeature3Activity::class.java),
         ))
     }
 

@@ -31,6 +31,7 @@ class ObjectAnimatorVsTransitionActivity : AppCompatActivity(), View.OnClickList
                 v.animate().scaleX(2f).scaleY(2f).start()
             }
             R.id.iv4, R.id.iv5, R.id.iv6 -> {
+                // 需要代码来修改布局参数
                 TransitionManager.beginDelayedTransition(binding.ll2)
                 with(v.layoutParams as LinearLayout.LayoutParams) {
                     width *= 2
